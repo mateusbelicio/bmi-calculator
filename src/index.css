@@ -9,4 +9,66 @@
   h4 {
     @apply tracking-tighter;
   }
+
+  ::selection {
+    @apply bg-primary-400/25 text-neutral-500;
+  }
+}
+
+@layer utilities {
+  .main-container {
+    @apply max-w-screen-lg 
+    mx-6 sm:mx-10 
+    lg:mx-auto 
+    grid 
+    sm:grid-cols-12 
+    sm:gap-x-[0.625rem] 
+    lg:gap-x-[1.875rem] 
+    [&>*]:col-span-full;
+  }
+
+  .text-flow-sm > :not(:first-child) {
+    margin-top: 1em;
+  }
+
+  .text-flow > :not(:first-child) {
+    margin-top: 1.5em;
+  }
+
+  .text-flow-lg > :not(:first-child) {
+    margin-top: 2em;
+  }
+
+  .hero-section {
+    @apply before:w-full 
+      before:h-[40rem] 
+      before:absolute 
+      before:bg-gradient-to-br 
+      before:from-[#D6FCFE00] 
+      before:to-[#D6E6FE] 
+      before:-z-10
+      before:top-0
+      before:rounded-bl-[2.25rem]
+      before:rounded-br-[2.25rem]
+      before:max-w-[61.125rem]
+      sm:before:left-6
+      sm:before:h-[46.0625rem];
+  }
+
+  .radio-button {
+    @apply appearance-none 
+    w-[0.9375rem] 
+    h-[0.9375rem] 
+    bg-white 
+    outline 
+    outline-1 
+    outline-neutral-300 
+    outline-offset-8 
+    rounded-full
+    hover:outline-primary-400
+    focus-visible:outline-primary-400
+    checked:outline-transparent
+    checked:bg-primary-400
+    checked:shadow-radio;
+  }
 }

@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: {
+          100: '#8FAECF',
           400: '#345FF6',
         },
         neutral: {
@@ -13,6 +14,18 @@ export default {
           500: '#253347',
         },
       },
+      boxShadow: {
+        DEFAULT: '1rem 2rem 3.5rem 0 rgb(0 0 0 / 0.25);',
+        radio: '0 0 0 0.5rem rgb(52 95 246 / 0.15)',
+      },
+      gridTemplateColumns: {
+        auto: 'repeat(auto-fit, minmax(365px, 1fr))',
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1160px',
     },
     fontSize: {
       xm: ['0.625rem', 1],

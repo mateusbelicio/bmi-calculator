@@ -1,57 +1,10 @@
+import HeroSection from './components/HeroSection';
+import Main from './layout/Main';
+
 export default function App() {
   return (
-    <>
-      <div>
-        <h1>Body Mass Index Calculator</h1>
-
-        <p>
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
-      </div>
-
-      <div>
-        <h2>Enter your details below</h2>
-
-        <form>
-          <fieldset>
-            <label htmlFor="">Metric</label>
-            <input type="radio" name="" id="" />
-            <label htmlFor="">Imperial</label>
-            <input type="radio" name="" id="" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Height</label>
-            <input type="text" name="" id="" />
-            <label htmlFor="">Weight</label>
-            <input type="text" name="" id="" />
-          </fieldset>
-          <fieldset disabled="disabled">
-            <label htmlFor="">
-              <p>Height</p>
-              <input type="text" name="" id="" />
-              <input type="text" name="" id="" />
-            </label>
-            <label htmlFor="">
-              <p>Weight</p>
-              <input type="text" name="" id="" />
-              <input type="text" name="" id="" />
-            </label>
-          </fieldset>
-        </form>
-
-        <div>
-          <h3>
-            Your BMI is... <strong>X</strong>
-          </h3>
-          <p>
-            Your BMI suggests you&apos;re {/* add classification */}. Your ideal
-            weight is between {/* add range */}.
-          </p>
-        </div>
-      </div>
+    <Main>
+      <HeroSection />
 
       <section>
         <img src="" alt="" />
@@ -159,7 +112,7 @@ export default function App() {
           </p>
         </div>
       </section>
-    </>
+    </Main>
   );
 }
 
