@@ -4,12 +4,12 @@ import InputField from './InputField';
 import NumberInput from './NumberInput';
 
 function MetricForm() {
-  const [height, setHeight] = useState(null);
-  const [weight, setWeight] = useState(null);
+  const [height, setHeight] = useState('');
+  const [weight, setWeight] = useState('');
   const id = useId();
 
   return (
-    <form className="flex flex-col gap-4">
+    <>
       <InputField fieldName={'Height'} id={`height-${id}`}>
         <NumberInput
           unit="cm"
@@ -30,7 +30,7 @@ function MetricForm() {
           onChange={(e) => setWeight(e.target.value)}
         />
       </InputField>
-    </form>
+    </>
   );
 }
 

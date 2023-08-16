@@ -9,7 +9,7 @@ function FormSelect({ selectedOption, setSelectedOption }) {
   }
 
   return (
-    <fieldset className="flex items-center gap-6 ml-2" onChange={handleChange}>
+    <fieldset className="grid grid-cols-2 items-center gap-6" onChange={handleChange}>
       <RadioInput name="Metric" id={id} isChecked={selectedOption === 'metric'} />
       <RadioInput name="Imperial" id={id} isChecked={selectedOption === 'imperial'} />
     </fieldset>

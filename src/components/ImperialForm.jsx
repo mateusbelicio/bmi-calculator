@@ -4,28 +4,28 @@ import InputField from './InputField';
 import NumberInput from './NumberInput';
 
 function ImperialForm() {
-  const [heightFT, setHeightFT] = useState(null);
-  const [heightIN, setHeightIN] = useState(null);
-  const [weightST, setWeightST] = useState(null);
-  const [weightLBS, setWeightLBS] = useState(null);
+  const [heightFT, setHeightFT] = useState('');
+  const [heightIN, setHeightIN] = useState('');
+  const [weightST, setWeightST] = useState('');
+  const [weightLBS, setWeightLBS] = useState('');
   const id = useId();
 
   return (
-    <form className="flex flex-col gap-4">
-      <InputField fieldName={'Height'} id={`height-${id}`}>
+    <>
+      <InputField fieldName={'Height'} id={`feet-${id}`}>
         <NumberInput
           unit="ft"
           placeholder="0"
-          name="height"
-          id={`height-${id}`}
+          name="feet"
+          id={`feet-${id}`}
           value={heightFT}
           onChange={(e) => setHeightFT(e.target.value)}
         />
         <NumberInput
           unit="in"
           placeholder="0"
-          name="height"
-          id={`height-${id}`}
+          name="inche"
+          id={`inche-${id}`}
           value={heightIN}
           onChange={(e) => setHeightIN(e.target.value)}
         />
@@ -34,21 +34,21 @@ function ImperialForm() {
         <NumberInput
           unit="st"
           placeholder="0"
-          name="weight"
-          id={`weight-${id}`}
+          name="stone"
+          id={`stone-${id}`}
           value={weightST}
           onChange={(e) => setWeightST(e.target.value)}
         />
         <NumberInput
           unit="lbs"
           placeholder="0"
-          name="weight"
-          id={`weight-${id}`}
+          name="pound"
+          id={`pound-${id}`}
           value={weightLBS}
           onChange={(e) => setWeightLBS(e.target.value)}
         />
       </InputField>
-    </form>
+    </>
   );
 }
 
