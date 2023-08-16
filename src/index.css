@@ -15,30 +15,7 @@
   }
 }
 
-@layer utilities {
-  .main-container {
-    @apply max-w-screen-lg 
-    mx-6 sm:mx-10 
-    lg:mx-auto 
-    grid 
-    sm:grid-cols-12 
-    sm:gap-x-[0.625rem] 
-    lg:gap-x-[1.875rem] 
-    [&>*]:col-span-full;
-  }
-
-  .text-flow-sm > :not(:first-child) {
-    margin-top: 1em;
-  }
-
-  .text-flow > :not(:first-child) {
-    margin-top: 1.5em;
-  }
-
-  .text-flow-lg > :not(:first-child) {
-    margin-top: 2em;
-  }
-
+@layer components {
   .hero-section {
     @apply before:w-full 
       before:h-[40rem] 
@@ -55,20 +32,66 @@
       sm:before:h-[46.0625rem];
   }
 
-  .radio-button {
+  .radio-button input[type='radio'] {
     @apply appearance-none 
-    w-[0.9375rem] 
-    h-[0.9375rem] 
+    w-[1.9375rem] 
+    h-[1.9375rem] 
     bg-white 
-    outline 
-    outline-1 
-    outline-neutral-300 
-    outline-offset-8 
+    border
+    border-neutral-300 
     rounded-full
-    hover:outline-primary-400
-    focus-visible:outline-primary-400
-    checked:outline-transparent
-    checked:bg-primary-400
-    checked:shadow-radio;
+    outline-none
+    transition-colors
+    hover:border-primary-400
+    focus-visible:border-primary-400
+    checked:bg-primary-400/[0.15];
+  }
+
+  .radio-button > span::after {
+    @apply content-['']
+      transition-transform
+      border-transparent
+      w-[0.9375rem]
+      h-[0.9375rem]
+      block
+      rounded-full
+      bg-white
+      absolute
+      top-2
+      left-2
+      scale-0;
+  }
+
+  .radio-button > input[type='radio']:checked + span::after {
+    @apply
+      border-transparent
+      bg-primary-400
+      scale-100;
+  }
+}
+
+@layer utilities {
+  .main-container {
+    @apply max-w-screen-lg 
+    mx-6 sm:mx-10 
+    lg:mx-auto 
+    grid
+    justify-items-center 
+    sm:grid-cols-12 
+    sm:gap-x-[0.625rem] 
+    lg:gap-x-[1.875rem] 
+    [&>*]:col-span-full;
+  }
+
+  .text-flow-sm > :not(:first-child) {
+    margin-top: 1em;
+  }
+
+  .text-flow > :not(:first-child) {
+    margin-top: 1.5em;
+  }
+
+  .text-flow-lg > :not(:first-child) {
+    margin-top: 2em;
   }
 }

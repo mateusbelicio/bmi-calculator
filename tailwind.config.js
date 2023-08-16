@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: {
           100: '#8FAECF',
+          300: '#587DFF',
           400: '#345FF6',
         },
         neutral: {

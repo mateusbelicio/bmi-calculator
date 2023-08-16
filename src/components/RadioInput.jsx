@@ -1,10 +1,10 @@
 function RadioInput({ id, name, isChecked }) {
   return (
     <label
-      className="font-semibold flex items-center gap-[1.125rem]"
+      className="font-semibold flex items-center gap-[1.125rem] relative radio-button"
       htmlFor={`${name.toLowerCase()}-${id}`}>
       <input
-        className="radio-button"
+        className=" shrink-0"
         type="radio"
         name={id}
         id={`${name.toLowerCase()}-${id}`}
@@ -12,7 +12,7 @@ function RadioInput({ id, name, isChecked }) {
         checked={isChecked}
         onChange={() => {}}
       />
-      <p>{name}</p>
+      <span>{name}</span>
     </label>
   );
 }
