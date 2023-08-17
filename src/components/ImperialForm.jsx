@@ -11,7 +11,7 @@ function ImperialForm() {
   const id = useId();
 
   return (
-    <>
+    <form id="calculator-form" className="flex flex-col gap-4 sm:gap-6">
       <InputField fieldName={'Height'} id={`feet-${id}`}>
         <NumberInput
           unit="ft"
@@ -48,7 +48,7 @@ function ImperialForm() {
           onChange={(e) => setWeightLBS(e.target.value)}
         />
       </InputField>
-    </>
+    </form>
   );
 }
 

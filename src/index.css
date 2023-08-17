@@ -10,6 +10,10 @@
     @apply tracking-tighter;
   }
 
+  p {
+    @apply text-neutral-400;
+  }
+
   ::selection {
     @apply bg-primary-400/25 text-neutral-500;
   }
@@ -26,8 +30,8 @@
       before:rounded-bl-[2.25rem]
       before:rounded-br-[2.25rem]
       before:max-w-[61.125rem]
-      sm:before:left-6
-      sm:before:h-[46.0625rem];
+      lg:before:left-6
+      lg:before:h-[46.0625rem];
   }
 
   .radio-button input[type='radio'] {

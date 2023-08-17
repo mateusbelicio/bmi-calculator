@@ -9,7 +9,7 @@ function MetricForm() {
   const id = useId();
 
   return (
-    <>
+    <form id="calculator-form" className="flex flex-col sm:flex-row gap-4 sm:gap-6">
       <InputField fieldName={'Height'} id={`height-${id}`}>
         <NumberInput
           unit="cm"
@@ -30,7 +30,7 @@ function MetricForm() {
           onChange={(e) => setWeight(e.target.value)}
         />
       </InputField>
-    </>
+    </form>
   );
 }
 

@@ -20,7 +20,8 @@ export default {
         radio: '0 0 0 0.5rem rgb(52 95 246 / 0.15)',
       },
       gridTemplateColumns: {
-        auto: 'repeat(auto-fit, minmax(365px, 1fr))',
+        fit: 'repeat(auto-fit, minmax(20rem, 1fr))',
+        fill: 'repeat(auto-fill, 20rem)',
       },
     },
     screens: {

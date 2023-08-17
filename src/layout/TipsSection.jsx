@@ -2,7 +2,7 @@ import TipItem from '../components/TipItem';
 
 function TipsSection() {
   return (
-    <section className="my-9 py-14 relative before:-z-10 before:absolute before:inset-0 before:gradient-1 before:opacity-25">
+    <section className="my-9 py-14 md:py-[3.75rem] relative before:-z-10 before:absolute before:inset-0 before:gradient-1 before:opacity-25">
       <div className="main-container">
         <h2 className="text-xl font-semibold sr-only">Some tips to stay in shape</h2>
         <ul className="flex flex-col gap-10">

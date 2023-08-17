@@ -9,10 +9,13 @@ function FormSelect({ selectedOption, setSelectedOption }) {
   }
 
   return (
-    <fieldset className="grid grid-cols-2 items-center gap-6" onChange={handleChange}>
+    <div
+      className="grid grid-cols-2 items-center gap-6"
+      onChange={handleChange}
+      aria-controls="calculator-form">
       <RadioInput name="Metric" id={id} isChecked={selectedOption === 'metric'} />
       <RadioInput name="Imperial" id={id} isChecked={selectedOption === 'imperial'} />
-    </fieldset>
+    </div>
   );
 }
 
