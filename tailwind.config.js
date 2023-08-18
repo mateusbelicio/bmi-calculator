@@ -34,9 +34,9 @@ export default {
       sm: ['0.875rem', 1.5],
       base: ['1rem', 1.5],
       md: ['1.25rem', 1.1],
-      lg: ['1.5rem', 1.1],
-      xl: ['clamp(2.00rem, calc(1.49rem + 2.18vw), 3.00rem)', 1.1],
-      '2xl': ['clamp(3.00rem, calc(2.49rem + 2.18vw), 4.00rem)', 1.1],
+      lg: ['1.5rem', 1.2],
+      xl: ['clamp(2.00rem, calc(0.04rem + 4.08vw), 3.00rem)', 1.1],
+      '2xl': ['clamp(3.00rem, calc(1.04rem + 4.08vw), 4.00rem)', 1.1],
     },
     fontFamily: {
       sans: '"Inter", sans-serif',

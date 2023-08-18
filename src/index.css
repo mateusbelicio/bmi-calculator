@@ -30,7 +30,10 @@
       before:rounded-bl-[2.25rem]
       before:rounded-br-[2.25rem]
       before:max-w-[61.125rem]
-      lg:before:left-6
+      lg:before:right-0
+      lg:before:w-[61.125rem]
+      lg:relative
+      lg:before:col-end-10
       lg:before:h-[46.0625rem];
   }
 
@@ -81,7 +84,7 @@
     justify-items-center 
     sm:grid-cols-12 
     sm:gap-x-[0.625rem] 
-    lg:gap-x-[1.875rem] 
+    lg:gap-x-8 
     [&>*]:col-span-full;
   }
 
@@ -93,8 +96,12 @@
     margin-top: 1.5em;
   }
 
-  .text-flow-lg > :not(:first-child) {
+  .text-flow-md > :not(:first-child) {
     margin-top: 2em;
+  }
+  
+  .text-flow-lg > :not(:first-child) {
+    margin-top: 2.25em;
   }
 
   .gradient-1 {

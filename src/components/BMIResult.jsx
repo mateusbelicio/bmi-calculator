@@ -1,11 +1,11 @@
 function BMIResult({ BMI }) {
-  const status = BMI >= 23 ? 'healthy weight' : 'overweight';
+  const status = BMI >= 23 ? 'healthy weight' : 'healthy weight';
   const rangeMin = 63.3;
   const rangeMax = 85.2;
 
   return (
     <>
-      {!BMI ? (
+      {BMI ? (
         <ResultDisplay className="sm:rounded-[1rem_4.5rem_4.5rem_1rem]">
           <h3 className="text-lg font-semibold">Welcome!</h3>
           <p className="text-sm text-white">
@@ -13,7 +13,7 @@ function BMIResult({ BMI }) {
           </p>
         </ResultDisplay>
       ) : (
-        <ResultDisplay className="sm:flex-row sm:justify-between sm:items-center sm:rounded-[1rem_5rem_5rem_1rem]">
+        <ResultDisplay className="sm:flex-row sm:justify-between sm:items-center sm:rounded-[1rem_150px_150px_1rem]">
           <h3 className="text-base font-semibold">
             Your BMI is...{' '}
             <span className="text-2xl block mt-2">
@@ -21,7 +21,7 @@ function BMIResult({ BMI }) {
               {23.6}
             </span>
           </h3>
-          <p className="text-sm sm:max-w-[16rem] text-white">
+          <p className="text-sm sm:max-w-[16rem] lg:max-w-[12.75rem] text-white">
             Your BMI suggests you&apos;re {status}. Your ideal weight is between{' '}
             <span className="font-semibold">
               {rangeMin}kgs - {rangeMax}kgs
