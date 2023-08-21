@@ -12,7 +12,7 @@ function MetricForm() {
 
   useEffect(() => {
     handleMetricBMI(height, weight);
-  }, [height, weight]);
+  }, [height, weight, handleMetricBMI]);
 
   return (
     <form id="calculator-form" className="flex flex-col sm:flex-row gap-4 sm:gap-6">

@@ -105,6 +105,6 @@
   }
 
   .gradient-1 {
-    background-image: linear-gradient(to bottom right, #D6FCFE00, #D6E6FE);
+    background-image: linear-gradient(to bottom right, #D6FCFE00 0%, #D6F1FE80 50%, #D6E6FE 100%);
   }
 }

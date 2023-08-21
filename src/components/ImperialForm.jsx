@@ -1,4 +1,5 @@
-import { useId, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
+import { useBMI } from '../hooks/useBMI';
 
 import InputField from './InputField';
 import NumberInput from './NumberInput';
@@ -9,6 +10,12 @@ function ImperialForm() {
   const [weightST, setWeightST] = useState('');
   const [weightLBS, setWeightLBS] = useState('');
   const id = useId();
+
+  const { handleImperialBMI } = useBMI();
+
+  useEffect(() => {
+    handleImperialBMI(+heightFT, +heightIN, +weightST, +weightLBS);
+  }, [heightFT, heightIN, weightST, weightLBS, handleImperialBMI]);
 
   return (
     <form id="calculator-form" className="flex flex-col gap-4 sm:gap-6">

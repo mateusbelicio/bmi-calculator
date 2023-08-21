@@ -1,20 +1,19 @@
 import { useId } from 'react';
+import { useBMI } from '../hooks/useBMI';
+
 import RadioInput from './RadioInput';
 
-function FormSelect({ selectedOption, setSelectedOption }) {
+function FormSelect() {
   const id = useId();
-
-  function handleChange(e) {
-    setSelectedOption(e.target.value);
-  }
+  const { changeType, type } = useBMI();
 
   return (
     <div
       className="grid grid-cols-2 items-center gap-6"
-      onChange={handleChange}
+      onChange={(e) => changeType(e.target.value)}
       aria-controls="calculator-form">
-      <RadioInput name="Metric" id={id} isChecked={selectedOption === 'metric'} />
-      <RadioInput name="Imperial" id={id} isChecked={selectedOption === 'imperial'} />
+      <RadioInput name="Metric" id={id} isChecked={type === 'metric'} />
+      <RadioInput name="Imperial" id={id} isChecked={type === 'imperial'} />
     </div>
   );
 }

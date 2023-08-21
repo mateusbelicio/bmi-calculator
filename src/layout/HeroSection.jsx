@@ -1,5 +1,6 @@
 import BMICalculator from '../components/BMICalculator';
 import Logo from '../components/Logo';
+import BMIProvider from '../contexts/BMIContext';
 
 function HeroSection() {
   return (
@@ -16,7 +17,9 @@ function HeroSection() {
         </p>
       </div>
 
-      <BMICalculator className="lg:col-start-7 col-end-[-1]" />
+      <BMIProvider>
+        <BMICalculator className="lg:col-start-7 col-end-[-1]" />
+      </BMIProvider>
     </section>
   );
 }

@@ -1,11 +1,23 @@
-function BMIResult({ BMI }) {
-  const status = BMI >= 23 ? 'healthy weight' : 'healthy weight';
-  const rangeMin = 63.3;
-  const rangeMax = 85.2;
+import { useBMI } from '../hooks/useBMI';
+
+const MIN_BMI_HEALTHY = 18.5;
+const MAX_BMI_HEALTHY = 24.9;
+
+function BMIResult() {
+  const { BMI, status, height, type } = useBMI();
+
+  const rangeMin =
+    type === 'metric'
+      ? (MIN_BMI_HEALTHY * Math.pow(height, 2)).toFixed(1)
+      : ((MIN_BMI_HEALTHY * Math.pow(height, 2)) / 703).toFixed(1);
+  const rangeMax =
+    type === 'metric'
+      ? (MAX_BMI_HEALTHY * Math.pow(height, 2)).toFixed(1)
+      : ((MAX_BMI_HEALTHY * Math.pow(height, 2)) / 703).toFixed(1);
 
   return (
     <>
-      {BMI ? (
+      {!BMI ? (
         <ResultDisplay className="sm:rounded-[1rem_4.5rem_4.5rem_1rem]">
           <h3 className="text-lg font-semibold">Welcome!</h3>
           <p className="text-sm text-white">
@@ -15,16 +27,14 @@ function BMIResult({ BMI }) {
       ) : (
         <ResultDisplay className="sm:flex-row sm:justify-between sm:items-center sm:rounded-[1rem_150px_150px_1rem]">
           <h3 className="text-base font-semibold">
-            Your BMI is...{' '}
-            <span className="text-2xl block mt-2">
-              {/* {BMI?.toFixed(1)} */}
-              {23.6}
-            </span>
+            Your BMI is... <span className="text-2xl block mt-2">{BMI?.toFixed(1)}</span>
           </h3>
           <p className="text-sm sm:max-w-[16rem] lg:max-w-[12.75rem] text-white">
             Your BMI suggests you&apos;re {status}. Your ideal weight is between{' '}
             <span className="font-semibold">
-              {rangeMin}kgs - {rangeMax}kgs
+              {rangeMin}
+              {type === 'metric' ? 'kgs' : 'lbs'} - {rangeMax}
+              {type === 'metric' ? 'kgs' : 'lbs'}
             </span>
             .
           </p>
