@@ -1,4 +1,5 @@
-import { useId, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
+import { useBMI } from '../hooks/useBMI';
 
 import InputField from './InputField';
 import NumberInput from './NumberInput';
@@ -6,7 +7,12 @@ import NumberInput from './NumberInput';
 function MetricForm() {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
+  const { handleMetricBMI } = useBMI();
   const id = useId();
+
+  useEffect(() => {
+    handleMetricBMI(height, weight);
+  }, [height, weight]);
 
   return (
     <form id="calculator-form" className="flex flex-col sm:flex-row gap-4 sm:gap-6">
@@ -17,7 +23,7 @@ function MetricForm() {
           name="height"
           id={`height-${id}`}
           value={height}
-          onChange={(e) => setHeight(e.target.value)}
+          setValue={setHeight}
         />
       </InputField>
       <InputField fieldName={'Weight'} id={`weight-${id}`}>
@@ -27,7 +33,7 @@ function MetricForm() {
           name="weight"
           id={`weight-${id}`}
           value={weight}
-          onChange={(e) => setWeight(e.target.value)}
+          setValue={setWeight}
         />
       </InputField>
     </form>

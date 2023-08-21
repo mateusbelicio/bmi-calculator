@@ -19,7 +19,7 @@ function ImperialForm() {
           name="feet"
           id={`feet-${id}`}
           value={heightFT}
-          onChange={(e) => setHeightFT(e.target.value)}
+          setValue={setHeightFT}
         />
         <NumberInput
           unit="in"
@@ -27,7 +27,7 @@ function ImperialForm() {
           name="inche"
           id={`inche-${id}`}
           value={heightIN}
-          onChange={(e) => setHeightIN(e.target.value)}
+          setValue={setHeightIN}
         />
       </InputField>
       <InputField fieldName={'Weight'} id={`weight-${id}`}>
@@ -37,7 +37,7 @@ function ImperialForm() {
           name="stone"
           id={`stone-${id}`}
           value={weightST}
-          onChange={(e) => setWeightST(e.target.value)}
+          setValue={setWeightST}
         />
         <NumberInput
           unit="lbs"
@@ -45,7 +45,7 @@ function ImperialForm() {
           name="pound"
           id={`pound-${id}`}
           value={weightLBS}
-          onChange={(e) => setWeightLBS(e.target.value)}
+          setValue={setWeightLBS}
         />
       </InputField>
     </form>
