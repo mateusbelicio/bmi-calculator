@@ -6,7 +6,6 @@ function RadioInput({ id, name, isChecked }) {
       <input
         className="cursor-pointer shrink-0"
         type="radio"
-        aria-selected={isChecked}
         name={id}
         id={`${name.toLowerCase()}-${id}`}
         value={name.toLowerCase()}
