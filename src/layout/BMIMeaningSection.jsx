@@ -1,5 +1,4 @@
 import manImage from '../assets/image-man-eating.webp';
-// import curvedLine from '../assets/pattern-curved-line-left.svg';
 
 function BMIMeaningSection() {
   return (
@@ -11,7 +10,7 @@ function BMIMeaningSection() {
           alt="Man eating a piece of maki (sushi)"
         />
       </div>
-      <div className="text-flow-md mx-6 sm:mx-0 max-w-prose md:col-start-7 lg:col-start-8 md:col-end-[-1] lg:absolute lg:bottom-10 lg:before:bottom-[calc(100%+2.25rem)] lg:before:absolute lg:before:content-[url('/bmi-calculator/src/assets/pattern-curved-line-left.svg')] lg:before:right-7">
+      <div className="text-flow-md mx-6 sm:mx-0 max-w-prose md:col-start-7 lg:col-start-8 md:col-end-[-1] lg:absolute lg:bottom-10 lg:before:bottom-[calc(100%+2.25rem)] lg:before:absolute lg:before:content-[url('/pattern-curved-line-left.svg')] lg:before:right-7">
         <h2 className="text-xl font-semibold">What your BMI result means</h2>
         <p className="">
           A BMI range of 18.5 to 24.9 is considered a &apos;healthy weight.&apos; Maintaining a
