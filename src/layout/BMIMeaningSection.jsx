@@ -1,8 +1,9 @@
 import manImage from '../assets/image-man-eating.webp';
+import Reveal from '../components/Reveal';
 
 function BMIMeaningSection() {
   return (
-    <section className="my-9 sm:my-12 lg:mt-[4.6875rem] sm:main-container md:items-center lg:relative">
+    <Reveal className="my-9 sm:my-12 lg:mt-[4.6875rem] sm:main-container md:items-center lg:relative">
       <div className="max-w-[35.25rem] w-full md:h-[25.75rem] lg:h-[33.3125rem] mb-12 md:mb-0 mx-auto md:col-start-1 md:col-end-6 lg:col-end-7 md:relative">
         <img
           className="md:absolute lg:static md:right-0 md:top-0 md:h-full md:max-w-none lg:w-full object-cover object-right"
@@ -20,7 +21,7 @@ function BMIMeaningSection() {
           activity, ideally about 30 minutes daily for five days a week.
         </p>
       </div>
-    </section>
+    </Reveal>
   );
 }
 

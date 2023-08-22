@@ -1,8 +1,9 @@
 import InfoCard from '../components/InfoCard';
+import Reveal from '../components/Reveal';
 
 function BMILimitationsSection() {
   return (
-    <section className="mt-9 sm:mt-12 lg:mt-[3.75rem] lg:mb-[7.5rem] mb-24 main-container gap-y-14 relative">
+    <Reveal className="mt-9 sm:mt-12 lg:mt-[3.75rem] lg:mb-[7.5rem] mb-24 main-container gap-y-14 relative">
       <div className="text-flow-md text-center md:col-span-full lg:col-start-1 lg:col-end-7 lg:text-left lg:relative lg:z-10">
         <h2 className="text-xl font-semibold">Limitations of BMI</h2>
         <p className="lg:after:content-[url('/pattern-curved-line-right.svg')] lg:relative lg:after:absolute lg:after:top-[calc(100%+4rem)] lg:after:left-[10.3125rem]">
@@ -51,7 +52,7 @@ function BMILimitationsSection() {
           nurse.
         </InfoCard>
       </ul>
-    </section>
+    </Reveal>
   );
 }
 
